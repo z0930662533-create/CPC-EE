@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣中油股份有限公司</title>
+    <style>
+        /* ================= 基礎設定與背景 ================= */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* 預設字體：如果沒有特別設定，就會使用這裡的字體 */
+            font-family: '微軟正黑體', 'Microsoft JhengHei', sans-serif; 
+        }
+
+        .background-container {
+            /* 在這裡替換你的背景圖片路徑，例如 url('bg.jpg') */
+            background-image: url('');
+            background-size: cover;        /* 讓圖片填滿整個畫面 */
+            background-position: center;   /* 圖片置中 */
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            /* 加入一層半透明的黑色遮罩，確保背景圖不會吃掉文字 */
+            background-color: rgba(255, 255, 255, 0.6);
+            background-blend-mode: overlay;
+        }
+
+        /* ================= 標題字體與大小設定 ================= */
+        .main-title {
+            /* 在這裡調整【台灣中油股份有限公司】的字體與大小 */
+            font-family: '標楷體', 'DFKai-SB', serif; /* 字型 */
+            font-size: 56px;                         /* 字體大小 */
+            font-weight: bold;                       /* 粗體 */
+            color: #003366;                          /* 字體顏色(深藍色) */
+            margin-top: 60px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);/* 文字陰影增加立體感 */
+        }
+
+        .sub-title {
+            /* 在這裡調整【儀電組 電子課 各場設備資料】的字體與大小 */
+            font-family: '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+            font-size: 36px;
+            color: #333333;
+            margin-top: 0;
+            margin-bottom: 60px;
+        }
+
+        /* ================= 下方三個圖案並排設定 ================= */
+        .gallery-container {
+            display: flex;           /* 使用 Flexbox 讓物件並排 */
+            justify-content: center; /* 置中對齊 */
+            gap: 50px;               /* 三個圖片之間的間距 */
+            flex-wrap: wrap;         /* 如果螢幕太小會自動換行 */
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.8); /* 圖片底下的白色半透明卡片背景 */
+            padding: 20px;
+            border-radius: 15px;     /* 圓角 */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* 卡片陰影 */
+            transition: transform 0.3s; /* 滑鼠移過去的動畫準備 */
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* 滑鼠移過去時卡片會微微往上浮 */
+        }
+
+        .card img {
+            width: 250px;            /* 圖片寬度 */
+            height: 200px;           /* 圖片高度 */
+            object-fit: cover;       /* 確保圖片比例不會變形 */
+            border-radius: 10px;     /* 圖片圓角 */
+            /* 替換圖片路徑：請在 HTML 的 src 屬性中更換 */
+        }
+
+        .card-label {
+            /* 在這裡調整【PLC】、【DCS】、【CCTV】的字體與大小 */
+            font-family: 'Arial', sans-serif;
+            font-size: 28px;         /* 字體大小 */
+            font-weight: bold;       /* 粗體 */
+            color: #d13030;          /* 字體顏色(中油紅) */
+            margin-top: 20px;
+            margin-bottom: 0;
+            letter-spacing: 2px;     /* 字母間距 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-container">
+        
+        <!-- 最上排顯示 -->
+        <h1 class="main-title">台灣中油股份有限公司</h1>
+        
+        <!-- 次排顯示 -->
+        <h2 class="sub-title">儀電組 電子課 各場設備資料</h2>
+
+        <!-- 下方三個圖併排 -->
+        <div class="gallery-container">
+            
+            <!-- 設備一：PLC -->
+            <div class="card">
+                <!-- 將 src 裡面的網址換成你的 PLC 圖檔路徑，例如 src="plc.jpg" -->
+                <img src="PLC/PLC.jpg" alt="PLC 設備圖">
+                <p class="card-label">PLC</p>
+            </div>
+
+            <!-- 設備二：DCS -->
+            <div class="card">
+                <!-- 將 src 裡面的網址換成你的 DCS 圖檔路徑 -->
+                <img src="DCS/DCS.jpg" alt="DCS 設備圖">
+                <p class="card-label">DCS</p>
+            </div>
+
+            <!-- 設備三：CCTV -->
+            <div class="card">
+                <!-- 將 src 裡面的網址換成你的 CCTV 圖檔路徑 -->
+                <img src="CCTV/CCTV.jpg" alt="CCTV 設備圖">
+                <p class="card-label">CCTV</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
